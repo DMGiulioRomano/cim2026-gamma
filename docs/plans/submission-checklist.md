@@ -39,11 +39,6 @@ Regola: **nessun upload prima che ogni voce sia spuntata**. `make anonymize-chec
 - [ ] Tag pushato su `origin/GAMMA` (`cd raw/GAMMA && git push origin cim2026-submission`)
 - [ ] `git submodule status` in parent mostra commit pinned matching
 
-### Partitura
-
-- [ ] `works/partitura.pdf` generato da CompositionDebugger (o equivalente)
-- [ ] PDF leggibile, ≤ 5 MB
-
 ### Bundle
 
 - [ ] `make submission-works` genera `submission/Gamma_*` senza errori

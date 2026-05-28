@@ -17,7 +17,6 @@ works/   submission Call for Works (deadline 29 maggio 2026)
   application_form_filled.odt        compilato (da generare)
   application_form_filled.pdf        compilato anonimizzato (da generare)
   audio_link.txt                     URL Drive/Dropbox del WAV stereo 48k/24bit
-  partitura.pdf                      doc tecnica/plot generato da CompositionDebugger
 
 paper/   submission Call for Papers (deadline 21 giugno 2026)
   CIM2026_LaTeX_template_paper_v3/   template LaTeX ufficiale (intoccato)
