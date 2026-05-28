@@ -1,4 +1,15 @@
 .DS_Store
+
+# Audio/media (troppo grandi per git; vivono su Drive/Dropbox)
+*.wav
+*.aif
+*.aiff
+*.flac
+*.mp3
+*.mp4
+*.mov
+
+# LaTeX artefatti
 *.aux
 *.log
 *.out
@@ -12,3 +23,24 @@ paper/CIM2026_LaTeX_template_paper_v3/*.aux
 paper/CIM2026_LaTeX_template_paper_v3/*.log
 paper/*.aux
 paper/*.log
+
+# Paper PDF generato (rebuild da sorgente; il template ufficiale resta tracciato in paper/CIM2026_LaTeX_template_paper_v3/)
+paper/cim2026.pdf
+
+# Works: PDF form anonimizzato generato (sorgente .odt tracciato)
+works/application_form_filled.pdf
+
+# Raw sources (PDF letteratura citati — gestiti in Zotero, gitignored qui)
+raw/papers/
+raw/proceedings/
+
+# Bundle submission (rigenerato da make submission-*)
+submission/
+
+# Inbox staging per ingest paper
+inbox/
+
+# Runtime
+.venv/
+.claude/
+.vscode/

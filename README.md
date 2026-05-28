@@ -4,7 +4,9 @@ Submission al **XXV CIM — Colloquio di Informatica Musicale**, L'Aquila, 13-16
 
 Autore: Giulio Romano De Mattia.
 
-Opera: **Gamma** — composizione elettroacustica su supporto fisso, generata via sistema YAML→Csound del repo [GAMMA](https://github.com/DMGiulioRomano/GAMMA).
+Opera: **Gamma** — composizione elettroacustica su supporto fisso, generata via sistema YAML→Csound del repo [GAMMA](https://github.com/DMGiulioRomano/GAMMA) (vendored come submodule in `raw/GAMMA/`).
+
+Convenzioni operative, workflow ingest fonti, branch policy e regole di anonimizzazione: vedi [CLAUDE.md](CLAUDE.md). Checklist pre-upload EasyChair: [docs/plans/submission-checklist.md](docs/plans/submission-checklist.md).
 
 ## Struttura
 
@@ -18,10 +20,48 @@ works/   submission Call for Works (deadline 29 maggio 2026)
   partitura.pdf                      doc tecnica/plot generato da CompositionDebugger
 
 paper/   submission Call for Papers (deadline 21 giugno 2026)
-  CIM2026_LaTeX_template_paper_v3/   template LaTeX ufficiale
-    cim2026.sty, cim2026template.tex, cim2026template.bib
+  CIM2026_LaTeX_template_paper_v3/   template LaTeX ufficiale (intoccato)
+  cim2026.tex                        sorgente paper (da derivare dal template)
+  refs.bib                           bibliografia (gestita da Zotero + Better BibTeX)
   figures/                           figure paper
+
+raw/                                 sorgenti immutabili (LLM legge, mai modifica)
+  GAMMA/                             submodule pinned a commit di render
+  papers/                            PDF letteratura citata (gitignored)
+  proceedings/                       PDF atti CIM (gitignored)
+
+wiki/                                knowledge base LLM-generated
+  index.md                           catalogo (leggere prima di ogni ricerca)
+  log.md                             append-only (solo main)
+  sources/{papers,proceedings,gamma}/
+  concepts/                          sintesi trasversali
+
+docs/
+  plans/submission-checklist.md      checklist pre-upload EasyChair
+  done/
+
+Makefile                             make paper, make works, make anonymize-check
+CLAUDE.md                            schema operativo + branch policy
 ```
+
+## Build
+
+```
+make paper                # compila paper/cim2026.pdf + anonymize-check
+make works                # verifica completezza works/ + anonymize-check
+make anonymize-check      # greppa metadati PDF per identificatori autore
+make submission-works     # bundle Works per EasyChair
+make submission-paper     # bundle Paper anonimizzato per EasyChair
+```
+
+## Workflow
+
+- Modifiche **grandi** (paper.tex, Makefile, ingest fonti, bump submodule): feature branch + PR
+- Modifiche **piccole** (typo, link, append wiki/log, .gitignore): commit diretto su main
+- Mai push --force su main; mai amend di commit pushati
+- Mai commit di PDF non anonimizzati sotto `paper/` o `works/`
+
+Dettagli completi in [CLAUDE.md](CLAUDE.md).
 
 ## Riferimenti
 
@@ -34,7 +74,7 @@ paper/   submission Call for Papers (deadline 21 giugno 2026)
 ## Vincoli chiave
 
 - Categoria A: Electroacoustic composition on fixed media
-- Audio: 48 kHz / 24-bit, ≤ 12 min, stereo (downmix da multicanale se necessario)
+- Audio: 48 kHz / 24-bit, 1-8 canali (Gamma: stereo), ≤ 12 min
 - Lingua submission: EN
-- Form anonimizzato (no autore nei metadati PDF)
+- Works NON è double-blind (compositore identificato nel form). Paper sì.
 - Max 1 opera per autore
