@@ -1,0 +1,11 @@
+url: TODO-paste-public-Drive-link-here
+commit: b070e1a4d2de547e853790fdb59902d084367246
+tag: cim2026-submission
+rendered: 2026-05-28
+duration: 00:07:44 (464.35 s)
+sample_rate: 48000
+bit_depth: 24
+channels: 2
+sha256: 6f4a78a30ed7e5ac255dc8d2f4f0bc8eabbc6c30ffdcda1773cfc9e3db7f4dbd
+filename: Gamma_submission.wav
+filesize_bytes: 133734224
