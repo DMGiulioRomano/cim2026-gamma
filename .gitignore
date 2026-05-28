@@ -1,0 +1,14 @@
+.DS_Store
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+paper/CIM2026_LaTeX_template_paper_v3/*.aux
+paper/CIM2026_LaTeX_template_paper_v3/*.log
+paper/*.aux
+paper/*.log
