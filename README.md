@@ -73,7 +73,7 @@ Dettagli completi in [CLAUDE.md](CLAUDE.md).
 ## Vincoli chiave
 
 - Categoria A: Electroacoustic composition on fixed media
-- Audio: 48 kHz / 24-bit, 1-8 canali (Gamma: stereo), ≤ 12 min
+- Audio: 48 kHz / 24-bit, 1-8 canali ammessi (Gamma: stereo 2ch L/R, non multicanale), ≤ 12 min
 - Lingua submission: EN
 - Works NON è double-blind (compositore identificato nel form). Paper sì.
 - Max 1 opera per autore
