@@ -14,7 +14,7 @@ Opera: **Gamma** — composizione elettroacustica su supporto fisso, generata vi
 
 | Track | Cosa | Deadline | Materiale | Lingua |
 |-------|------|----------|-----------|--------|
-| **Works** | Composizione elettroacustica fixed media (Categoria A) | **29 maggio 2026** | `application_form_filled.pdf` (anonimizzato) + WAV stereo 48k/24bit su Drive/Dropbox + partitura tecnica | EN |
+| **Works** | Composizione elettroacustica fixed media (Categoria A) | **29 maggio 2026** | `application_form_filled.pdf` + WAV stereo 48k/24bit su Drive/Dropbox (URL nel form) | EN |
 | **Paper** | Comunicazione orale 6-8 pp double-blind che descrive l'opera | **21 giugno 2026** | `paper/cim2026.pdf` anonimizzato | EN (raccomandato) o IT con abstract EN |
 
 EasyChair: https://easychair.org/conferences/?conf=xxvcim2026
@@ -40,9 +40,8 @@ cim2026-gamma/
 ├── works/
 │   ├── cim2026_template_works_en_v2.{odt,pdf}   ← template ufficiale, riferimento
 │   ├── application_form_filled.odt        ← form compilato, modificabile
-│   ├── application_form_filled.pdf        ← form anonimizzato per EasyChair
-│   ├── audio_link.txt                     ← URL + commit + tag + SHA256 WAV
-│   └── partitura.pdf                      ← documento tecnico/plot
+│   ├── application_form_filled.pdf        ← form per EasyChair (compositore identificato)
+│   └── audio_link.txt                     ← URL Drive + commit GAMMA + tag + SHA256 WAV
 ├── raw/                                   ← sorgenti immutabili (LLM legge, mai modifica)
 │   ├── GAMMA/                             ← submodule pinned a commit specifico
 │   ├── papers/                            ← PDF letteratura citata (gitignored)

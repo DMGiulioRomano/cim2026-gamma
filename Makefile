@@ -8,7 +8,6 @@ PAPER_TEX   := $(PAPER_DIR)/cim2026.tex
 PAPER_PDF   := $(PAPER_DIR)/cim2026.pdf
 WORKS_PDF   := $(WORKS_DIR)/application_form_filled.pdf
 AUDIO_LINK  := $(WORKS_DIR)/audio_link.txt
-PARTITURA   := $(WORKS_DIR)/partitura.pdf
 
 SUBMISSION_DIR := $(REPO_DIR)submission
 
@@ -58,7 +57,6 @@ works:
 	@echo "Verifica completezza works/..."
 	@test -f $(WORKS_PDF) || { echo "ERR: $(WORKS_PDF) mancante"; exit 1; }
 	@test -f $(AUDIO_LINK) || { echo "ERR: $(AUDIO_LINK) mancante"; exit 1; }
-	@test -f $(PARTITURA) || { echo "ERR: $(PARTITURA) mancante"; exit 1; }
 	@grep -qE '^url:\s*https?://' $(AUDIO_LINK) || { echo "ERR: $(AUDIO_LINK) manca riga 'url:'"; exit 1; }
 	@grep -qE '^commit:\s*[0-9a-f]{7,40}' $(AUDIO_LINK) || { echo "ERR: $(AUDIO_LINK) manca riga 'commit:'"; exit 1; }
 	@grep -qE '^sha256:\s*[0-9a-f]{64}' $(AUDIO_LINK) || { echo "ERR: $(AUDIO_LINK) manca riga 'sha256:'"; exit 1; }
@@ -97,7 +95,6 @@ submission-works: works
 	mkdir -p $(SUBMISSION_DIR)
 	cp $(WORKS_PDF) $(SUBMISSION_DIR)/Gamma_application_form.pdf
 	cp $(AUDIO_LINK) $(SUBMISSION_DIR)/Gamma_audio_link.txt
-	cp $(PARTITURA) $(SUBMISSION_DIR)/Gamma_partitura.pdf
 	@echo "Bundle Works pronto in $(SUBMISSION_DIR)/"
 
 submission-paper: paper
