@@ -43,9 +43,11 @@ Le chiavi qui sotto sono **provvisorie**: la definitiva la fissa Better BibTeX.
   musica da ritratto di fase di sistemi di equazioni differenziali. Reperire
   citazione completa (autore, venue, anno).
 - **Atti CIM**: i volumi XI 1995 (258 pp) e XVI 2006 (34 pp parziale) sono
-  scaricati in `raw/proceedings/` (gitignored). Da spogliare per individuare i
-  singoli paper su caos / Csound / sistemi dinamici da citare; quando trovati,
-  aprire `wiki/sources/proceedings/<autore-anno>.md` per ciascuno.
+  scaricati in `raw/proceedings/` (gitignored). Spogliati e ingestiti 5 paper
+  (Rizzuti 2006, Prignano 1995, Di Scipio 1995, Leach 1995, Bottoni 2006 — vedi
+  `wiki/sources/proceedings/`). Da spogliare ancora: Belladonna 1995
+  (HyperCSound), Di Scipio 1995 (Riflessioni sull'analisi), Liuni-Morelli 2006
+  (Playing Music, Xenakis).
 
 ---
 
