@@ -14,15 +14,26 @@ Questa pagina è la vista operativa per Claude: ingest, propagazione in wiki, ma
 
 ## Papers (raw/papers/)
 
+Chiavi candidate dalla ricerca precursori (2026-06-03, vedi [precursori](../concepts/precursori.md)).
+Stato `✗` = entry da creare in `refs.bib` via Zotero + PDF da ingestire.
+
 | Chiave BibTeX | Autori, anno | Titolo breve | Wiki | Sezioni paper |
 |---------------|--------------|--------------|------|---------------|
-| _(nessuna fonte)_ | | | | |
+| DiScipio1999 | Di Scipio, 1999 | Iterated Nonlinear Functions | ✗ | related work, intro |
+| Anderson2014 | Anderson, 2014 | Audible Ecosystems (Di Scipio) | ✗ | related work |
+| Bidlack1992 | Bidlack, 1992 | Chaotic Systems Compositional Algorithms | ✗ | architettura, related work |
+| Branchi19xx | Branchi, s.d. | Intervalli e sistemi di intonazione | ✗ | architettura, related work |
+| Koenig19xx | Koenig, s.d. | Project 1 / Project 2 (Tendency) | ✗ | architettura |
+| Roads2001 | Roads, 2001 | Microsound | ✗ | poetica (tempo differito) |
 
 ## Proceedings CIM (raw/proceedings/)
 
+PDF Atti scaricati (gitignored). Da spogliare per singoli paper rilevanti.
+
 | Chiave BibTeX | Autori, anno | Titolo breve | Wiki | Sezioni paper |
 |---------------|--------------|--------------|------|---------------|
-| _(nessuna fonte)_ | | | | |
+| AttiCIM_XI_1995 | AA.VV., 1995 | Atti XI CIM (258 pp) | ✗ | precursori CIM |
+| AttiCIM_XVI_2006 | AA.VV., 2006 | Atti XVI CIM (34 pp, parziale) | ✗ | precursori CIM |
 
 ## Documentazione software
 
