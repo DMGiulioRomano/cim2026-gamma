@@ -28,12 +28,20 @@ Stato `✗` = entry da creare in `refs.bib` via Zotero + PDF da ingestire.
 
 ## Proceedings CIM (raw/proceedings/)
 
-PDF Atti scaricati (gitignored). Da spogliare per singoli paper rilevanti.
+PDF Atti scaricati (gitignored): XI 1995 (258 pp), XVI 2006 (34 pp parz.).
+Singoli paper ingestiti dagli Atti:
 
 | Chiave BibTeX | Autori, anno | Titolo breve | Wiki | Sezioni paper |
 |---------------|--------------|--------------|------|---------------|
-| AttiCIM_XI_1995 | AA.VV., 1995 | Atti XI CIM (258 pp) | ✗ | precursori CIM |
-| AttiCIM_XVI_2006 | AA.VV., 2006 | Atti XVI CIM (34 pp, parziale) | ✗ | precursori CIM |
+| Rizzuti2006 | Rizzuti, 2006 | Il caos sonoro (granular + iterazione non lineare, Csound) | ✓ | related work, architettura |
+| Prignano1995 | Prignano, 1995 | Sintesi eventi sonori per iterazioni funzionali | ✓ | related work, architettura |
+| DiScipio1995 | Di Scipio, 1995 | Real-time Polyphonic Time-shifting (granulazione ricorsiva) | ✓ | intro, related work |
+| Leach1995 | Leach, 1995 | Algorithmic Composition as Gene Expression | ✓ | related work |
+| Bottoni2006 | Bottoni et al., 2006 | Multimedia LaB (loop differito, linguaggio formale) | ✓ | poetica, architettura |
+
+Da spogliare ancora negli Atti: Belladonna 1995 (HyperCSound, generazione eventi
+complessi), Di Scipio 1995 "Riflessioni sull'analisi della musica elettroacustica",
+Liuni-Morelli 2006 (Playing Music, Xenakis game theory).
 
 ## Documentazione software
 

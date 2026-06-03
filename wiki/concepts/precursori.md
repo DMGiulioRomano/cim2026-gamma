@@ -96,18 +96,41 @@ spazio, ampiezza). Nessun match stretto trovato → candidato a claim di
 contributo nel paper. Da verificare con ricerca mirata prima di rivendicare
 novità.
 
-## Precursori CIM (atti open-access)
+## Precursori CIM (ingestiti dagli Atti)
 
-Atti del Colloquio di Informatica Musicale full-text su `cim.lim.di.unimi.it`.
-Caos, sistemi dinamici e Csound già presenti negli atti storici → fonte diretta
-per la sezione *posizionamento rispetto ai precursori CIM* di [[poetica]].
+Atti del Colloquio di Informatica Musicale, full-text su `cim.lim.di.unimi.it`,
+scaricati in `raw/proceedings/` (gitignored): **XI 1995** (258 pp), **XVI 2006**
+(34 pp parz.). Paper individuali ingestiti:
 
-- Scaricati in `raw/proceedings/` (gitignored): Atti **XI 1995** (258 pp, full),
-  Atti **XVI 2006** (34 pp, parziale).
-- Da spogliare per singoli paper rilevanti → quando individuati, aprire una
-  pagina `wiki/sources/proceedings/<autore-anno>.md` per ciascuno.
+- [[rizzuti-2006]] — "Il caos sonoro": sintesi granulare via **iterazione di
+  funzioni non lineari** + mappa logistica, **in CSound, senza random**. Match
+  CIM più stretto a GAMMA (caos deterministico, una sorgente → molti parametri).
+- [[prignano-1995]] — *functional iteration synthesis*: mappa seno iterata a
+  sample rate, spazio delle fasi e biforcazione.
+- [[discipio-1995]] — granulazione ricorsiva `x[n+1]=f_b(f_a(x[n]))`,
+  microcomposizione, emergenza di gesti imprevedibili.
+- [[leach-1995]] — composizione algoritmica come *gene expression*: grammatica
+  context-sensitive che "cresce da una cellula".
+- [[bottoni-2006]] — Multimedia LaB: ciclo differito assioma→regole→riscrittura→
+  selezione; linguaggio musicale come linguaggio formale (precursore DSL/CAC).
+
+### Genealogia L'Aquila (rilevante per CIM 2026)
+
+Di Scipio e Prignano (XI CIM 1995) operano entrambi al **Laboratorio Musica e
+Sonologia, Università di L'Aquila** — la **stessa città del CIM 2026**. Entrambi
+sintesi per **iterazione di funzioni non lineari**; Rizzuti (2006) ne è erede
+diretto. Linea genealogica locale "iterazione non lineare → suono" da valorizzare
+nel posizionamento del paper: GAMMA si inscrive in una tradizione situata, non la
+inventa.
+
+### Da spogliare ancora
+
+- Belladonna 1995 (*HyperCSound*, generazione di eventi sonori complessi),
+  Di Scipio 1995 ("Riflessioni sull'analisi della musica elettroacustica"),
+  Liuni-Morelli 2006 (*Playing Music*, teoria dei giochi di Xenakis →
+  *Formalized Music*).
 - Progetto **SDM (Sistemi Dinamici e Musica)**: caos→musica via ritratto di
-  fase — parente concettuale, da reperire riferimento.
+  fase — parente concettuale, riferimento da reperire.
 
 ## Stato fonti (da ingestire)
 

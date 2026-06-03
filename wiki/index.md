@@ -18,9 +18,14 @@ _(nessuna fonte ingestita)_
 
 ## Sources — proceedings CIM
 
-PDF in `raw/proceedings/` (gitignored). Una pagina per paper CIM individualmente letto.
+PDF Atti in `raw/proceedings/` (gitignored): XI CIM 1995 (258 pp), XVI CIM 2006
+(34 pp, parziale). Una pagina per paper CIM individualmente letto.
 
-_(nessuna fonte ingestita)_
+- [discipio-1995](sources/proceedings/discipio-1995.md) — granulazione ricorsiva `x[n+1]=f_b(f_a(x[n]))`, microcomposizione, emergenza; Lab Musica e Sonologia L'Aquila.
+- [prignano-1995](sources/proceedings/prignano-1995.md) — functional iteration synthesis, mappa seno iterata, spazio delle fasi/biforcazione; stesso lab L'Aquila.
+- [leach-1995](sources/proceedings/leach-1995.md) — composizione algoritmica come gene expression: grammatica context-sensitive che "cresce da una cellula".
+- [rizzuti-2006](sources/proceedings/rizzuti-2006.md) — "caos sonoro": sintesi granulare via iterazione funzioni non lineari + mappa logistica in CSound, no random. Match più stretto.
+- [bottoni-2006](sources/proceedings/bottoni-2006.md) — Multimedia LaB: loop differito assioma→regole→riscrittura, linguaggio musicale formale (DSL/CAC).
 
 ## Sources — moduli GAMMA
 
