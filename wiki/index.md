@@ -40,6 +40,7 @@ Sintesi trasversali che attraversano più moduli GAMMA, orientate alla tesi comp
 - [compensazione-isofonica](concepts/compensazione-isofonica.md) — dinamica percettiva in Phon via ISO 226:2003; ampiezza a valle dell'altezza.
 - [stato-musicale](concepts/stato-musicale.md) — maschere di tendenza, stato statico vs transizione, i due strati ritmici (macro/micro).
 - [poetica](concepts/poetica.md) — tesi compositiva: stati in transizione, emergenza, tempo differito (in costruzione).
+- [precursori](concepts/precursori.md) — related work per asse: Di Scipio/Bidlack (caos), Branchi (pitagorica), Koenig (tendenza), Roads (tempo differito), ISO 226; Atti CIM scaricati.
 
 ---
 
