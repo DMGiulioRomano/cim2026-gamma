@@ -14,7 +14,9 @@ Convenzione: dopo ogni ingest, aggiungere una riga sotto la sezione appropriata 
 
 PDF in `raw/papers/` (gitignored). Una pagina per PDF letto, schema fisso (vedi `CLAUDE.md > Workflow ingest paper PDF`).
 
-_(nessuna fonte ingestita)_
+- [discipio-1990](sources/papers/discipio-1990.md) — mappa logistica come generatore formale e timbrico (ICMC Glasgow 1990); fondamento genealogico diretto per Gamma.
+- [discipio-1999](sources/papers/discipio-1999.md) — formalizzazione FIS con sine map, texture ambientali; distinzione scala-campione vs. scala-partitura centrale per tesi.
+- [discipio-2001](sources/papers/discipio-2001.md) — versione consolidata FIS su Leonardo/MIT Press; paper più citabile della serie, attitudine empirica/ecologica.
 
 ## Sources — proceedings CIM
 
