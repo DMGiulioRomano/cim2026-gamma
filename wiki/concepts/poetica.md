@@ -62,7 +62,7 @@ che abita lo spazio nella forma più pura. (Per *Intero* e per *Lontano*.)
 
 - [[ritmo-generatore]] · [[mappa-logistica]] · [[accordatura-pitagorica]] ·
   [[compensazione-isofonica]] · [[stato-musicale]]
-- Composizione: [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
+- Composizione: [[gamma-opera]] (struttura 6 sezioni) · [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
 - Materiali Works: [works-form-status](../../docs/plans/works-form-status.md)
 
 ## Sezioni paper CIM 2026 dove descrivere

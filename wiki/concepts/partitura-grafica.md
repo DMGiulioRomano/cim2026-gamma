@@ -112,7 +112,7 @@ Il plot non corregge errori di sintassi (quello lo fa il parser): corregge
 - [[compensazione-isofonica]] — la dinamica in Phon dei due pannelli inferiori
 - [[accordatura-pitagorica]] — l'asse Ottava.Registro
 - Pipeline GAMMA: [pipeline](../../raw/GAMMA/wiki/pipeline.md) (step 9, plot)
-- Composizione: [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
+- Composizione: [[gamma-opera]] · [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
 
 ## Sezioni paper CIM 2026 dove descrivere
 

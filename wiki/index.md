@@ -35,7 +35,9 @@ Submodule in `raw/GAMMA/`. Una pagina per modulo analizzato per il paper.
 
 Il submodule GAMMA ha **una propria wiki per-modulo** in `raw/GAMMA/wiki/` (immutabile): `includes/eventoSonoro.md`, `voce.md`, `initIsoAmp.md`, `GenPythagFreqs.md`, `NonlinearFunc.md`, `pfield_comp.md`, `concepts/maschera_tendenza.md`, `composizioni/Gamma.md`. Le concept page qui sotto **sintetizzano** quei moduli nell'ottica della tesi paper/works; per il dettaglio implementativo per-modulo rimandano alla wiki GAMMA.
 
-_(nessuna pagina sources/gamma dedicata: la sintesi vive in Concepts)_
+- [gamma-opera](sources/gamma/gamma-opera.md) — struttura delle 6 sezioni dell'opera (timeline, durate, offset, layer per sezione); fonte di verità che corregge la md GAMMA stale (sez. II `TODO`, scampanello mancante). Durata ~8:05.
+
+_(le sintesi trasversali per-aspetto vivono in Concepts)_
 
 ## Concepts
 
