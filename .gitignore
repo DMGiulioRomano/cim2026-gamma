@@ -40,6 +40,11 @@ submission/
 # Inbox staging per ingest paper
 inbox/
 
+# Figure: anteprime PNG e HTML interattivi rigenerabili dagli script.
+# I PDF (paper/figures/*.pdf) sono tracciati: li include il LaTeX.
+paper/figures/*.png
+paper/figures/*.html
+
 # Runtime
 .venv/
 .claude/
