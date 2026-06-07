@@ -95,6 +95,7 @@ Dal dizionario in `guida.yaml`
 - [[ritmo-generatore]] — cosa fa il ritmo una volta fissato lo stato
 - [[mappa-logistica]] — `nonlinear_mode`, ritmo micro
 - [[compensazione-isofonica]] — `dinamica`
+- [[partitura-grafica]] — come le maschere vengono visualizzate (buste vs eventi)
 - [[poetica]] — transizione/stasi come forma
 - Wiki GAMMA: [maschera_tendenza](../../raw/GAMMA/wiki/concepts/maschera_tendenza.md)
 

@@ -41,7 +41,8 @@ Il ciclo di lavoro è un feedback lungo: specifica YAML → render offline →
 ascolto → riscrittura. Il tempo differito è una scelta, non un limite: separare
 la decisione dalla resa permette di trattare l'ascolto come uno strumento di
 giudizio sull'orbita, non sul gesto. È la triangolazione fra DSL parametrico,
-partitura visuale (il plot PDF del `CompositionDebugger`) e ascolto.
+partitura visuale (il plot PDF del `CompositionDebugger`, [[partitura-grafica]])
+e ascolto.
 
 ## Il ciclo Delta → Gamma
 
@@ -61,7 +62,7 @@ che abita lo spazio nella forma più pura. (Per *Intero* e per *Lontano*.)
 
 - [[ritmo-generatore]] · [[mappa-logistica]] · [[accordatura-pitagorica]] ·
   [[compensazione-isofonica]] · [[stato-musicale]]
-- Composizione: [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
+- Composizione: [[gamma-opera]] (struttura 6 sezioni) · [Gamma (wiki GAMMA)](../../raw/GAMMA/wiki/composizioni/Gamma.md)
 - Materiali Works: [works-form-status](../../docs/plans/works-form-status.md)
 
 ## Sezioni paper CIM 2026 dove descrivere

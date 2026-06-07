@@ -35,7 +35,9 @@ Submodule in `raw/GAMMA/`. Una pagina per modulo analizzato per il paper.
 
 Il submodule GAMMA ha **una propria wiki per-modulo** in `raw/GAMMA/wiki/` (immutabile): `includes/eventoSonoro.md`, `voce.md`, `initIsoAmp.md`, `GenPythagFreqs.md`, `NonlinearFunc.md`, `pfield_comp.md`, `concepts/maschera_tendenza.md`, `composizioni/Gamma.md`. Le concept page qui sotto **sintetizzano** quei moduli nell'ottica della tesi paper/works; per il dettaglio implementativo per-modulo rimandano alla wiki GAMMA.
 
-_(nessuna pagina sources/gamma dedicata: la sintesi vive in Concepts)_
+- [gamma-opera](sources/gamma/gamma-opera.md) — struttura delle 6 sezioni dell'opera (timeline, durate, offset, layer per sezione); fonte di verità che corregge la md GAMMA stale (sez. II `TODO`, scampanello mancante). Durata ~8:05.
+
+_(le sintesi trasversali per-aspetto vivono in Concepts)_
 
 ## Concepts
 
@@ -46,6 +48,7 @@ Sintesi trasversali che attraversano più moduli GAMMA, orientate alla tesi comp
 - [accordatura-pitagorica](concepts/accordatura-pitagorica.md) — nube pitagorica a 200 intervalli/ottava (eredità Branchi); zone di battimento emergenti.
 - [compensazione-isofonica](concepts/compensazione-isofonica.md) — dinamica percettiva in Phon via ISO 226:2003; ampiezza a valle dell'altezza.
 - [stato-musicale](concepts/stato-musicale.md) — maschere di tendenza, stato statico vs transizione, i due strati ritmici (macro/micro).
+- [partitura-grafica](concepts/partitura-grafica.md) — il plot PDF del `CompositionDebugger` come strumento compositivo: tre assi (altezza/durata, dinamica lineare, dinamica prob.), buste di tendenza vs eventi campionati. Angolo #2 del paper.
 - [poetica](concepts/poetica.md) — tesi compositiva: stati in transizione, emergenza, tempo differito (in costruzione).
 - [precursori](concepts/precursori.md) — related work per asse: Di Scipio/Bidlack (caos), Branchi (pitagorica), Koenig (tendenza), Roads (tempo differito), ISO 226; Atti CIM scaricati.
 
