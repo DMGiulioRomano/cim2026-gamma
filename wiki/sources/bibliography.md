@@ -22,6 +22,8 @@ Stato `✗` = entry da creare in `refs.bib` via Zotero + PDF da ingestire.
 | DiScipio1990 | Di Scipio, 1990 | Composition by Exploration of Non-Linear Dynamic Systems | ✓ | intro, related work, architettura |
 | DiScipio1999 | Di Scipio, 1999 | Synthesis of Environmental Sound Textures by Iterated Nonlinear Functions | ✓ | related work, architettura |
 | DiScipio2001 | Di Scipio, 2001 | Iterated Nonlinear Functions as a Sound-Generating Engine | ✓ | intro, related work, architettura, conclusioni |
+| Doebereiner2010 | Döbereiner, 2010 | Model and Material (CMSS, modelli compositivi, real/symbolic) | ✓ | intro, related work, architettura, poetica |
+| FletcherMunson1933 | Fletcher & Munson, 1933 | Loudness: definizione, misura, calcolo (curve isofoniche) | ✓ | architettura, poetica |
 | Anderson2014 | Anderson, 2014 | Audible Ecosystems (Di Scipio) | ✗ | related work |
 | Bidlack1992 | Bidlack, 1992 | Chaotic Systems Compositional Algorithms | ✗ | architettura, related work |
 | Branchi19xx | Branchi, s.d. | Intervalli e sistemi di intonazione | ✗ | architettura, related work |

@@ -17,6 +17,8 @@ PDF in `raw/papers/` (gitignored). Una pagina per PDF letto, schema fisso (vedi 
 - [discipio-1990](sources/papers/discipio-1990.md) — mappa logistica come generatore formale e timbrico (ICMC Glasgow 1990); fondamento genealogico diretto per Gamma.
 - [discipio-1999](sources/papers/discipio-1999.md) — formalizzazione FIS con sine map, texture ambientali; distinzione scala-campione vs. scala-partitura centrale per tesi.
 - [discipio-2001](sources/papers/discipio-2001.md) — versione consolidata FIS su Leonardo/MIT Press; paper più citabile della serie, attitudine empirica/ecologica.
+- [doebereiner-2010](sources/papers/doebereiner-2010.md) — tesi CMSS (Sonology): sintesi come atto compositivo, modello-di-suono = modello-di-composizione, intersezione sensibile/intelligibile; inquadra DSL Gamma e poetica.
+- [fletcher-munson-1933](sources/papers/fletcher-munson-1933.md) — paper fondativo loudness (JASA), origine curve isofoniche; radice storica della compensazione isofonica ISO 226 di Gamma.
 
 ## Sources — proceedings CIM
 
