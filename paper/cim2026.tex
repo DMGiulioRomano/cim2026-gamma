@@ -1,0 +1,280 @@
+% -----------------------------------------------
+% Paper CIM 2026 — opera Gamma
+% Derivato dal template ufficiale CIM2026_LaTeX_template_paper_v3 (INTOCCATO).
+% Lo stile cim2026.sty vive nel template dir: il build lo trova via TEXINPUTS
+% (vedi Makefile target `paper`).
+%
+% ANONIMIZZAZIONE (double-blind): toggle \ifanonymous.
+%   \anonymoustrue  -> submission (autore/affiliazione/self-cite nascosti)
+%   \anonymousfalse -> camera-ready (post-accettazione)
+% -----------------------------------------------
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{cim2026}
+\usepackage{times}
+\usepackage{ifpdf}
+\usepackage[english]{babel}
+
+% --- toggle double-blind ---
+\newif\ifanonymous
+\anonymoustrue
+
+% user defined variables
+\def\papertitle{A SINGLE GENERATIVE VARIABLE: RHYTHM AS SOURCE IN A DEFERRED-TIME ELECTROACOUSTIC COMPOSITION}
+\ifanonymous
+  \def\firstauthor{Anonymous}
+  \def\pdfauthorline{Anonymous}
+\else
+  \def\firstauthor{Giulio Romano De Mattia}
+  \def\pdfauthorline{Giulio Romano De Mattia}
+\fi
+
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex,
+    pdftitle={\papertitle},
+    pdfauthor={\pdfauthorline},
+    bookmarksnumbered,
+    pdfstartview=XYZ
+   ]{hyperref}
+  \global \def\figGraphicScore{figures/graphic_score.pdf}
+  \global \def\figRhythmic{figures/rhythmic_harmonics.pdf}
+  \global \def\figSpatial{figures/spatial_harmonics.pdf}
+\else
+  \usepackage[dvips]{epsfig,graphicx}
+  \usepackage[dvips,
+    bookmarksnumbered,
+    pdfstartview=XYZ
+  ]{hyperref}
+\fi
+
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+\title{\papertitle}
+
+% Un solo autore. In modalita anonima il nome resta "Anonymous" e
+% l'affiliazione/email sono soppresse (la nota di copyright nello .sty usa
+% \firstauthor, quindi resta neutra).
+\ifanonymous
+  \oneauthor{\firstauthor}{}
+\else
+  \oneauthor
+   {\firstauthor}{Affiliation \\ {\tt \href{mailto:author@server.org}{author@server.org}}}
+\fi
+
+\begin{document}
+\maketitle
+
+\abstract
+This paper describes the compositional poetics of a fixed-media electroacoustic
+work and the YAML-to-Csound system that generates it. The central claim is
+architectural and aesthetic at once: a single generative variable, the rhythmic
+value, governs four otherwise independent dimensions of the synthesis --- time,
+pitch, space and amplitude. The composer does not write the resulting fourfold
+surface; instead a source is chosen and a possibility space is declared, while a
+discrete nonlinear dynamical system (a logistic map) auto-generates the rhythmic
+stream. Pitch inhabits a dense 200-degree Pythagorean cloud whose beatings are
+not planned degree by degree but emerge from the encounter of voices; perceptual
+coherence is restored by an isophonic (ISO~226:2003) amplitude compensation. The
+work is composed in deferred time: a long feedback loop of specification, offline
+rendering, listening and rewriting. We argue that the graphic score emitted by
+the system is itself a compositional instrument --- the third vertex of a
+triangulation between parametric DSL, visual score and listening --- and we
+situate the practice within a local lineage of nonlinear-iteration synthesis.
+\endabstract
+
+\section{Introduction}\label{sec:introduction}
+
+The submitted composition is a fixed-media electroacoustic work that brings
+musical \emph{states in transition} into focus. Its form is not a succession of
+chosen events but the evolution of tendencies: a state that transforms
+continuously from beginning to end, or that holds still. This paper is not a
+technical manual of the generating system. It uses that system as instrument and
+material to argue a compositional posture: \emph{control of the possibility
+space, not of the detail}.
+
+Three principles hold the work together. First, a single variable generates the
+texture: the rhythmic value decides time, pitch, space and amplitude
+(Section~\ref{sec:rhythm}). Second, that source is a dynamical system: the
+rhythm auto-generates through nonlinear feedback, so that a seed and a regime
+are fixed and the orbit emerges. Third, the frequency space produces what is not
+controlled: a dense Pythagorean cloud yields beatings that arise rather than
+being written. The posture is personal and situated; it is offered as a
+practice, not as a prescription.
+
+The lineage is explicit. Synthesis by iterated nonlinear functions, and the
+poetics of emergence in which the composer designs the system rather than the
+outcome, were formulated by Di~Scipio two decades earlier
+\cite{DiScipio1990,DiScipio2001}, with the logistic map a canonical bridge from
+chaos to musical parameters [Bidlack 1992, source to be retrieved]. Notably,
+this is a \emph{local}
+lineage: Di~Scipio and Prignano both worked at the Laboratorio Musica e
+Sonologia in L'Aquila --- the host city of CIM 2026 --- on nonlinear-iteration
+synthesis \cite{DiScipio1995,Prignano1995}, a line of which Rizzuti is a direct
+heir \cite{Rizzuti2006}. The work inscribes itself in this tradition; it does
+not found it.
+
+\section{Rhythm as the single generative variable}\label{sec:rhythm}
+
+In the generating system, the rhythmic value is not one parameter among many: it
+is the generative parameter. A single integer per event is read by four
+independent dimensions of the synthesis. Deciding the rhythm means deciding, in
+the same gesture, pitch, time, space and amplitude.
+
+\textbf{Time.} The inter-onset interval and the event duration are fractions of
+a reference \emph{harmonic duration} divided by the rhythmic value: a duration
+subdivided by the harmonic series, where row $i$ is split into $i$ equal parts
+(Figure~\ref{fig:rhythmic}). The rhythmic value selects which subdivision sounds.
+
+\begin{figure}
+ \centerline{\includegraphics[width=\columnwidth]{\figRhythmic}}
+ \caption{Rhythmic harmonics: a reference duration subdivided by the harmonic
+ series. Row $i$ is split into $i$ equal parts; the rhythmic value selects which
+ subdivision sounds.}
+ \label{fig:rhythmic}
+\end{figure}
+
+\textbf{Pitch.} The same integer indexes the Pythagorean frequency cloud of
+Section~\ref{sec:pitch}, so denser rhythms and denser pitch sampling move
+together.
+
+\textbf{Space.} The value drives a spatial harmonic distribution: lobes of
+energy laid out along the circumference (Figure~\ref{fig:spatial}), so that
+rhythmic articulation and stereo (mid/side) placement share a single control.
+
+\begin{figure}
+ \centerline{\includegraphics[width=\columnwidth]{\figSpatial}}
+ \caption{Spatial harmonics $|\sin/\cos(i/2\cdot\theta)|^{n}$ laid out along the
+ circumference: lobes of energy whose number follows the harmonic index. The
+ rhythmic articulation and the stereo (mid/side) placement share one control.}
+ \label{fig:spatial}
+\end{figure}
+
+\textbf{Amplitude.} The value participates in the dynamic profile, whose
+physical realization is perceptually corrected (Section~\ref{sec:iso}).
+
+To our knowledge the parameter-mapping literature covers gesture-to-synthesis or
+feature-based synthesis, but not a \emph{single generative integer driving four
+independent dimensions}. We offer this as the most original axis of the work,
+stated as a contribution to be tested rather than a claim of priority.
+
+\subsection{The rhythm is itself auto-generated}\label{sec:logistic}
+
+After a short explicit initial sequence, the rhythmic stream auto-generates:
+each new value is a function of the previous one, $x[n+1]=f(x[n])$, a
+discrete-time dynamical system whose orbit is the music. The map is a clamped
+nonlinear function with selectable regimes (a logistic family at
+$r \approx 2.8$ to $3.99$), so that fixing the seed and the regime fixes a class
+of orbits, not a list of values. This is the operational meaning of
+``control of the possibility space'': the composer writes the seed and the
+regime, the orbit emerges \cite{DiScipio1999,Rizzuti2006}.
+
+\section{A dense Pythagorean pitch cloud}\label{sec:pitch}
+
+The pitch space is a very dense Pythagorean cloud: not the twelve notes of the
+historical Pythagorean scale but \textbf{200 intervals per octave}, generated by
+the same chain of just fifths ($3/2$) reduced to the octave. Density is the
+point: at 200 degrees adjacent pitches are nearly coincident, and when the
+rhythm makes them sound together \emph{beatings} arise that the composer does
+not control degree by degree --- they emerge from the encounter of voices.
+
+This axis descends from Walter Branchi's work on intonation systems
+[Branchi, source to be retrieved]. The extension here is quantitative and
+changes its nature: the same procedure --- just fifths stacked and folded into
+the octave --- pushed to a high number of degrees, not to obtain a playable
+scale but to \emph{saturate} the frequency space and produce interference zones.
+
+\subsection{Isophonic amplitude compensation}\label{sec:iso}
+
+Dynamics in the work are \emph{perceptual}, not physical. The markings
+$ppp \ldots fff$ are not dBFS levels but levels in Phon: the physical amplitude
+of each event is corrected as a function of frequency by the ISO~226:2003
+equal-loudness contour, so that perceived loudness stays constant across the
+spectrum at a given dynamic. The isophonic amplitude is the counterweight ---
+the one place where the system re-imposes a perceptual coherence on the emergent
+material. The practice has methodological precedent in loudness-normalized
+sonification on the 40-phon contour.
+
+\section{The graphic score as a compositional instrument}\label{sec:score}
+
+\begin{figure*}[t]
+ \centerline{\includegraphics[width=\textwidth]{\figGraphicScore}}
+ \caption{The graphic score: one 60-second page of the work. Shaded envelopes
+ are the declared tendency masks (the possibility space written in the YAML);
+ the bars are the sampled events (the stochastic realization). Top axis: octave/
+ register and harmonic duration; middle: linear dynamics; bottom: probabilistic
+ dynamics. Reading the distance between declared space and sampled events is a
+ compositional act.}
+ \label{fig:graphicscore}
+\end{figure*}
+
+Alongside the audio, the system emits a PDF \emph{graphic score}
+(Figure~\ref{fig:graphicscore}). The class that produces it is named a
+``debugger'', but its function is compositional: it is the third vertex of a
+triangulation between the parametric DSL, the visual score and listening. The
+plot superimposes two things on a shared time axis: the declared \emph{tendency
+masks} (shaded envelopes --- the possibility space written in the YAML) and the
+\emph{sampled events} (the bars --- the actual stochastic realization). Reading
+the distance between the declared space and what was sampled is a compositional
+act: it is where the composer judges whether the orbit, not the gesture,
+deserves rewriting.
+
+This closes the loop of deferred time. The work is composed in a long feedback:
+specification, offline rendering, listening, rewriting. Deferred time is a
+choice, not a limitation --- separating decision from realization lets listening
+become a judgement on the orbit. The non-realtime rendering of granular sound
+has a historical precedent in Roads's account of compositions made ``in years''
+[Roads 2001, source to be retrieved]. A language-based variant of the same
+deferred cycle --- axiom, rules, rewriting, selection --- is described by
+Bottoni et al. \cite{Bottoni2006}, where the musical language is itself a formal
+language.
+
+\section{The work: six embricated sections}\label{sec:work}
+
+The concrete score unfolds in six sections of roughly 485~seconds total
+(about 8'05'', within the fixed-media limit). Negative start offsets make the
+sections \emph{embricate}: a section enters before the previous one ends. The
+arc moves from a slow low-register birth of clusters, through a glissando solo,
+a densification from clouds to swarm, a rupture that irrupts \emph{inside} the
+swarm (sections III and IV overlap entirely), a vertical cluster mass, and a
+final dissolving glissando. Each section is described as a field of state
+tendencies, not as a sequence of events: the masks move (transition) or hold
+(stasis), and the audible form is the reading of that movement.
+
+\section{Related work}\label{sec:related}
+
+The work sits at the intersection of several lines. Deterministic chaos and the
+logistic map as compositional source: Di~Scipio's functional iteration synthesis
+\cite{DiScipio1990,DiScipio1999,DiScipio2001} and Bidlack's canonical mapping
+[Bidlack 1992, source to be retrieved]; within the CIM proceedings, Prignano's
+functional-iteration
+synthesis \cite{Prignano1995}, Di~Scipio's recursive granulation
+\cite{DiScipio1995}, and Rizzuti's deterministic ``sound chaos''
+\cite{Rizzuti2006}. Tendency masks as directional selection within an evolving
+range descend from Koenig's Project~1/2. Algorithmic growth from a single cell
+is explored by Leach \cite{Leach1995}; deferred, language-based composition by
+Bottoni et al. \cite{Bottoni2006}. The distinguishing move of the present work
+is not the mathematics of chaos but its point of application: rhythm as the
+upstream variable that propagates across four dimensions.
+
+\section{Conclusions}\label{sec:conclusions}
+
+The work argues a posture through its construction: a single generative variable,
+an emergent pitch space, a perceptual counterweight, and a deferred-time loop in
+which the graphic score is an instrument of judgement. The form is the reading of
+musical states in transition. The most original axis --- one integer driving four
+independent dimensions --- is offered for scrutiny; the Branchi lineage of the
+Pythagorean axis remains to be fully developed once the primary source is
+secured.
+
+%bibliography here
+\bibliography{refs}
+
+\end{document}
