@@ -11,6 +11,11 @@ AUDIO_LINK  := $(WORKS_DIR)/audio_link.txt
 
 SUBMISSION_DIR := $(REPO_DIR)submission
 
+# Lo stile cim2026.sty vive nel template ufficiale (intoccato). pdflatex gira da
+# paper/: estendiamo TEXINPUTS al template dir cosi trova lo .sty senza copiarlo.
+TEMPLATE_DIR := $(PAPER_DIR)/CIM2026_LaTeX_template_paper_v3
+TEX_ENV      := TEXINPUTS=.:$(TEMPLATE_DIR):
+
 # Identificatori autore da bloccare in PDF anonimizzati.
 # Estendere se nuovi alias emergono.
 ANON_PATTERNS := De Mattia|Giulio|DMGiulioRomano|giuliodemattia|DeMattia
@@ -38,10 +43,10 @@ paper: $(PAPER_TEX)
 	@if [ ! -f $(PAPER_DIR)/refs.bib ]; then \
 		echo "WARN: $(PAPER_DIR)/refs.bib mancante — bibtex fallirà"; \
 	fi
-	cd $(PAPER_DIR) && pdflatex -interaction=nonstopmode cim2026.tex
+	cd $(PAPER_DIR) && $(TEX_ENV) pdflatex -interaction=nonstopmode cim2026.tex
 	cd $(PAPER_DIR) && bibtex cim2026 || echo "WARN: bibtex fallito (refs.bib mancante o vuoto)"
-	cd $(PAPER_DIR) && pdflatex -interaction=nonstopmode cim2026.tex
-	cd $(PAPER_DIR) && pdflatex -interaction=nonstopmode cim2026.tex
+	cd $(PAPER_DIR) && $(TEX_ENV) pdflatex -interaction=nonstopmode cim2026.tex
+	cd $(PAPER_DIR) && $(TEX_ENV) pdflatex -interaction=nonstopmode cim2026.tex
 	@$(MAKE) anonymize-check
 
 paper-clean:
